@@ -7,11 +7,8 @@
    src: url('../fonts/poppins-v24-latin-300.eot?#iefix') format('embedded-opentype'),
       url('../fonts/poppins-v24-latin-300.woff2') format('woff'),
       url('../fonts/poppins-v24-latin-300.woff') format('woff'),
-      /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
       url('../fonts/poppins-v24-latin-300.ttf') format('truetype'),
-      /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
       url('../fonts/poppins-v24-latin-300.svg#Poppins') format('svg');
-   /* Legacy iOS */
 }
 @font-face {
    font-display: swap;
@@ -19,7 +16,6 @@
    font-style: normal;
    font-weight: 400;
    src: url('../fonts/poppins-v24-latin-regular.eot');
-   /* IE9 Compat Modes */
    src: url('../fonts/poppins-v24-latin-regular.eot?#iefix') format('embedded-opentype'),
       /* IE6-IE8 */
       url('../fonts/poppins-v24-latin-regular.woff2') format('woff2'),
@@ -75,12 +71,19 @@
     --color-brend-dark: #425929;
  }
  /*base*/
+ *{
+   box-sizing: border-box;
+ }
  body{
     color: var(--color-primary-dark);
     font-family: "Poppins", sans-serif;
     font-size: 18px;
     font-weight: 400;
     line-height: 1.5;
+    margin: 0;
+ }
+ h1,h2,h3,h4,h5,h6,p{
+   margin-top: 0;
  }
  address{
    font-style: normal;
@@ -88,8 +91,26 @@
  ul{
     list-style-type: none;
  }
+ .visually-hidden{
+   position: absolute;
+   left: -10000px;
+   top: auto;
+   width: 1px;
+   height: 1px;
+   overflow: hidden;
+ }
+ .section{
+   padding: 48px 0;
+ }
+ .container{
+   width: 100%;
+   max-width: 1288px;
+   margin: 0 auto;
+   padding: 0 24px;
+ }
  /*button*/
  .button {
+   padding: 16px 32px;
     color: var(--color-primary-light);
     font-weight: 600;
     background-color: var(--color-brend-light);
@@ -111,7 +132,11 @@
         font-weight: 600;
      }
      /*hero*/
+     .hero-section{
+      padding: 272px 0;
+     }
      .hero-title{
+      margin-bottom: 0;
         color: var(--color-primary-light);
         text-align: center;
         font-size: 128px;
@@ -138,6 +163,12 @@
         color: var(--color-brend-dark);
      }
      /*tradition-section*/
+     .traditions-section{
+      padding-top: 96px;
+     }
+     .traditions-title{
+      margin-bottom: 42px;
+     }
      .traditions-text .brand{
          color: var(--color-brend-light);
          font-weight: 600;
@@ -146,11 +177,18 @@
       text-transform: uppercase;
      }
      /*chefs-section*/
+     .chefs-title{
+      margin-bottom: 80px;
+     }
      .chef-title{
       font-size: 40px;
       font-weight: 600;
+      margin-bottom: 16px;
      }
      /*format section*/
+     .formats-title{
+      margin-bottom: 80px;
+     }
      .format-title{
       font-size: 24px;
       font-weight: 600;
@@ -158,6 +196,10 @@
      .format-text{
       font-size: 14px;
       font-weight: 300;
+     }
+     /*contact section*/
+     .contact-title{
+      margin-bottom: 16px;
      }
      /*footer*/
      .address-link{
