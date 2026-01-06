@@ -192,6 +192,14 @@
      .traditions-section{
       padding-top: 96px;
      }
+     .traditions-container{
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+     }
+     .traditions-content{
+      max-width: 710px;
+     }
      .traditions-title{
       margin-bottom: 42px;
      }
@@ -201,6 +209,9 @@
      }
      .traditions-text .uppercase{
       text-transform: uppercase;
+     }
+     .traditions-text.limited{
+      max-width: 340px;
      }
      /*chefs-section*/
      .chefs-title{
@@ -212,6 +223,15 @@
       margin-bottom: 16px;
      }
      /*format section*/
+     .formats-list{
+      display: flex;
+      gap: 20px;
+     }
+     .format-card{
+      padding: 24px;
+      border: 1px solid lightgrey;
+      border-radius: 16px;
+     }
      .formats-title{
       margin-bottom: 80px;
      }
