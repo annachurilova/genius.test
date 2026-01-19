@@ -230,8 +230,8 @@
      }
      /*chefs-section*/
      .chefs-title{
+      position: relative;
       margin:0 auto 80px;
-      max-width: 520px;
      }
      .chefs-title::before,
      .chefs-title::after{
@@ -240,6 +240,16 @@
       border: 2px solid #cfcfbc;
       content: '';
      }
+      .chefs-title::before{
+         position: absolute;
+         left: 0;
+         bottom: 24px;
+        }
+       .chefs-title::after{
+         position: absolute;
+         right: 0;
+         bottom: 24px;
+       }
      .chefs-list{
       display: flex;
       gap: 40px 30px;
@@ -333,7 +343,32 @@
      /*footer*/
      .footer{
       padding: 32px 0;
-     }
+      position: relative;
+         background-color: var(--color-primary-dark);
+         background-image: url("../images/footer-background.png");
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-position: center;
+      }
+      .footer::before,
+      .footer::after {
+         position: absolute;
+         bottom: 0;
+         background-repeat: no-repeat;
+         content: '';
+      }
+      .footer::before {
+         background-image: url('../images/decor-bread-small.png');
+         width: 180px;
+         height: 120px;
+         left: 0;
+      }
+      .footer::after {
+         width: 380px;
+         height: 190px;
+         right: 0;
+         background-image: url('../images/decor-bread-large.png');
+      }
      .footer-container{
       display: flex;
       gap: 20px;
@@ -374,10 +409,32 @@
      .address-copyright{
       font-size: 14px;
      }
-     .footer{
-      background-color: var(--color-primary-dark);
-      background-image: url("../images/footer-background.png");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
+     /* Modal */
+     .backdrop{
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color:rgba(0, 0, 0, 0.5);
      }
+     .modal{
+      position: relative;
+      width: 880px;
+      height: 500px;
+      background-color: var(--color-primary-light);
+      border-radius: 32px;
+  }
+  .backdrop.is-hidden{
+   opacity: 0;
+   visibility: hidden;
+   pointer-events: none;
+  }
+  .modal-btn-close{
+   position: absolute;
+   top: 40px;
+   right: 40px;
+  }
