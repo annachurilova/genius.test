@@ -1,0 +1,32 @@
+.advantages-section {
+    padding: 16px 0;
+    background-color: var(--color-brend-normal);
+        &__list {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            background-color: var(--color-brend-normal);
+        }
+    
+        &__item {
+            font-size: 20px;
+            font-weight: 300px;
+            color: var(--color-primary-light);
+        }
+}
+
+
+
+.section__title {
+    font-size: 64px;
+    font-weight: 900;
+    line-height: 1.3;
+
+    &--centered {
+        text-align: center;
+    }
+
+    .accent {
+        color: var(--color-brend-dark);
+    }
+}

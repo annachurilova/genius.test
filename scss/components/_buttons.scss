@@ -10,5 +10,11 @@
    &:hover{
       color: var(--color-brend-dark);
       background-color:transparent;
-   }  cursor: not-allowed;
+   }
+   &:disabled {
+      color: var(--color-secondary-dark);
+      background-color: transparent;
+      border-color: var(--color-secondary-dark);  
+      cursor: not-allowed;
+   }
 }
