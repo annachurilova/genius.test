@@ -1,9 +1,16 @@
+@use '../utils/variables.scss';
 .traditions-section{
-      padding-top: 96px;
+      padding-top: 40px;
+
+      @media screen and (min-width: variables.$br-tablet){
+            padding-top: 96px;
+      }
+
        &__container {
-                  display: flex;
-                  justify-content: space-between;
-                  gap: 40px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+             gap: 40px;
             }
        &__content {
                max-width: 710px;
@@ -17,6 +24,14 @@
              max-width: 340px;
              }
             }
+     &__image{
+            display: none;
+            border-radius: 400px 400px 0px 0px;
+
+      @media screen and (min-width: variables.$br-tablet){
+            display: block;
+            }
+      }
      }
      
     

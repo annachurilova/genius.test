@@ -1,9 +1,15 @@
+@use '../utils/variables.scss';
+
 .header{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    padding-top: 32px;
+    padding-top: 16px;
+
+    @media screen and (min-width: variables.$br-desktop) {
+        padding-top: 32px;
+    }
 
     &__container {
         display: flex;
@@ -19,10 +25,32 @@
     }
     
     &__menu {
-        display: flex;
-        gap: 64px;
-        flex-grow: 1;
-        justify-content: center;
+         display: none;
+      
+        @media screen and (min-width: variables.$br-desktop) {
+            display: flex;
+            gap: 64px;
+            flex-grow: 1;
+            justify-content: center;
+        }
      }
-}
+     &__button{
+        display: none;
 
+        @media screen and (min-width: variables.$br-desktop) {
+            display: block;
+        }
+    }
+    &__burger{
+        background-color: transparent;
+        border: none;
+        width: 24px;
+        height: 24px;
+        padding: 0;
+        fill: var(--color-primary-light);
+
+        @media screen and (min-width: variables.$br-desktop) {
+            display: none;
+        }
+    }
+ }
