@@ -1,4 +1,6 @@
+ @use '../utils/variables.scss';
  .footer {
+    text-align: center;
      padding: 32px 0;
      position: relative;
      background-color: var(--color-primary-dark);
@@ -6,76 +8,91 @@
      background-repeat: no-repeat;
      background-size: cover;
      background-position: center;
- }
 
- .footer::before,
- .footer::after {
-     position: absolute;
-     bottom: 0;
-     background-repeat: no-repeat;
-     content: '';
- }
+    @media screen and (min-width: variables.$br-tablet){
+        text-align: left;
+    }
 
- .footer::before {
-     background-image: url('../images/decor-bread-small.png');
-     width: 180px;
-     height: 120px;
-     left: 0;
- }
+    &::before,
+    &::after {
+        position: absolute;
+        bottom: 0;
+        background-repeat: no-repeat;
+        content: '';
+        }
+    
+    &::before {
+        background-image: url('../images/decor-bread-small.png');
+        width: 180px;
+        height: 120px;
+        left: 0;
+        }
+    
+    &::after {
+        width: 380px;
+        height: 190px;
+        right: 0;
+        background-image: url('../images/decor-bread-large.png');
+     }
+ 
 
- .footer::after {
-     width: 380px;
-     height: 190px;
-     right: 0;
-     background-image: url('../images/decor-bread-large.png');
- }
+ 
 
- .footer-container {
+ &__container {
      display: flex;
+     flex-direction: column;
      gap: 20px;
- }
 
- .footer-nav {
+    @media screen and (min-width: variables.$br-tablet) {
+            flex-direction: row;
+        }
+     }
+
+ &__nav,
+ &__address{
      display: flex;
-     flex-basis: 50%;
+     flex-direction: column;
      gap: 20px;
+
+    @media screen and (min-width: variables.$br-tablet){
+        flex-direction: row;
+        flex-basis: 50%;
+    }
  }
 
- .footer-logo,
- .footer-menu {
-     flex-grow: 1;
- }
+    &__logo,
+    &__menu {
+         flex-grow: 1;
+     }
+ 
+    &__address-list,
+    &__address-info {
+         flex-grow: 1;
+    }
 
- .address-list,
- .address-info {
-     flex-grow: 1;
- }
 
- .footer-address {
-     display: flex;
-     flex-basis: 50%;
-     gap: 20px;
- }
 
- .address-link {
-     color: var(--color-primary-light);
-     font-family: 16px;
-     font-weight: 300;
-     text-decoration: none;
- }
+    &__address-link {
+        color: var(--color-primary-light);
+        font-family: 16px;
+         font-weight: 300;
+        text-decoration: none;
+     }
 
- .address-link:hover {
-     color: var(--color-brend-normal)
- }
+     &__address-link:hover {
+         color: var(--color-brend-normal)
+     }
 
- .address-icon {
-     fill: var(--color-primary-light);
- }
+    &__address-icon {
+         fill: var(--color-primary-light);
+    }
 
- .address-icon:hover {
-     fill: var(--color-brend-normal);
- }
+    &__address-icon:hover {
+         fill: var(--color-brend-normal);
+    }
 
- .address-copyright {
-     font-size: 14px;
- }
+     &__address-copyright {
+         font-size: 14px;
+    }
+}
+

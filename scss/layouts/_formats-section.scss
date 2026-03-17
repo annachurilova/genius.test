@@ -1,16 +1,33 @@
-.formats-container {
+@use '../utils/variables.scss';
+.formats-section{
+    &__slider{
     display: flex;
     align-items: center;
     gap: 32px;
+    }
+    &__container{
+        overflow: hidden;
+    }
 
+    &__list{
+        margin-bottom: 32px;
+    }
+
+    &__button{
+        display: none;
+ 
+       @media screen and (min-width: variables.$br-tablet){
+            display: flex;
+        }
+    }
     &__title {
         margin-bottom: 80px;
     }
-
+/*
     &__list {
         display: flex;
         gap: 20px;
      }
-    
+    */
 }
-    
+  

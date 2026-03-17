@@ -1,9 +1,16 @@
+@use '../utils/variables.scss';
 .contact-section {
     padding-bottom: 96px;
 
     &__container {
         display: flex;
-        gap: 32px;
+        flex-direction: column;
+        gap: 24px;
+
+        @media screen and (min-width: variables.$br-tablet){
+            flex-direction: row;
+            gap: 32px;
+        }
      }
     
      &__title {
@@ -19,8 +26,23 @@
     
     &__map {
         flex-shrink: 0;
+        margin: 0 -24px;
+        height: 176px;
         border-radius: 16px;
         border: none;
+
+        @media screen and (min-width: variables.$br-tablet){
+            margin: auto;
+            width: 320px;
+            height: 500px;
+        } 
+        
+        @media screen and (min-width: variables.$br-desktop){
+            width: 603px;
+            height: 595px;
+        }
+
+
      }
 }
 

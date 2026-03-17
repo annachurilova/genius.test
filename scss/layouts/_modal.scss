@@ -1,3 +1,4 @@
+ @use '../utils/variables.scss';
  .backdrop {
      position: fixed;
      top: 0;
@@ -25,10 +26,14 @@
      max-width: 880px;
      height: 100%;
      max-height: 880px;
-     padding: 128px;
+     padding: 48px;
      background-color: var(--color-primary-light);
      border-radius: 32px;
      overflow: auto;
+
+    @media screen and (min-width: variables.$br-tablet){
+        padding: 128px;
+    }
 
      &__form-field{
         margin-bottom: 32px;

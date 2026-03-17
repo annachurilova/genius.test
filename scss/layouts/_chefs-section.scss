@@ -1,16 +1,25 @@
+@use '../utils/variables.scss';
 .chefs-section{
     &__title {
         position: relative;
-        margin: 0 auto 80px;
+        margin: 0 auto 24px;
+
+        @media screen and (min-width: variables.$br-desktop){
+            margin-bottom: 80px;
+        }
     
         &::before,
         &::after {
+            display: none;
             position: absolute;
-            display: block;
             content: '';
             width: 352px;
             border: 2px solid #cfcfbc;
             bottom: 24px;
+
+        @media screen and (min-width: variables.$br-desktop){
+            display: block;
+        }
         }
         &::before {
             left: 0;
@@ -21,10 +30,19 @@
     }
     &__list {
         display: flex;
-        gap: 40px 30px;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        @media screen and (min-width: variables.$br-tablet){
+            flex-direction: row;
+            gap: 40px 30px;
         }
+    }
 
     &__item {
+       @media screen and (min-width: variables.$br-tablet){
         flex: 1;
+       }
     }
 }
