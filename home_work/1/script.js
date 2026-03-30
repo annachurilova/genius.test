@@ -33,7 +33,7 @@ console.log(Math.random() * (4 - 2) + 2);//
 
 //дізнатись довжину месседжа
 const message = "Welcome to Bahamas!";
-console.log(message.length);//21
+console.log(message.length);//19
 
 //Месседж великіми літерами
 console.log(message.toUpperCase("Welcome to Bahamas!"));//WELCOME TO BAHAMAS!
